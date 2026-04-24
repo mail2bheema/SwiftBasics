@@ -1,0 +1,55 @@
+//Value type
+struct Student {
+    
+    var studentId: Int
+    var studentName: String
+    var studentMarks: Int
+    var studentAge: Int
+    var studentEmail: String
+    var studentPhone: String
+    var studentAddress: String
+    var studentGender: String
+    
+    mutating func updateStudentAddress(newAddress: String) -> Void {
+        self.studentAddress = newAddress
+    }
+    
+    mutating func updateStudentPhone(newPhone: String) -> Void {
+        self.studentPhone = newPhone
+    }
+    
+    mutating func updateStudentEmail(newEmail: String) -> Void {
+        self.studentEmail = newEmail
+    }
+}
+
+var student: Student = Student(studentId: 1, studentName: "Bheema", studentMarks: 450, studentAge: 23, studentEmail: "mail2bheema@gmail.com", studentPhone: "+91 9550786835", studentAddress: "Hyderabad", studentGender: "Male")
+
+var student1 = student
+student1.studentName = "Thinkhat"
+
+print(student.studentName)
+print(student1.studentName)
+
+//Reference Type
+class Person {
+    var name: String
+    var age: Int
+    var ageGroup: String {
+        return age < 18 ? "Minor" : "Adult"
+    }
+    var address: String?
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    
+}
+
+var person: Person = Person(name: "Bheema", age: 23)
+var person1: Person = person  //assigning an object to another object
+person1.name = "Test"
+print(person.name) //over written the name in first object also
+print(person1.name)
+
