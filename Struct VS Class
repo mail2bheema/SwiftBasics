@@ -26,7 +26,7 @@ struct Student {
 var student: Student = Student(studentId: 1, studentName: "Bheema", studentMarks: 450, studentAge: 23, studentEmail: "mail2bheema@gmail.com", studentPhone: "+91 9550786835", studentAddress: "Hyderabad", studentGender: "Male")
 
 var student1 = student
-student1.studentName = "Thinkhat"
+student1.studentName = "Test"
 
 print(student.studentName)
 print(student1.studentName)
